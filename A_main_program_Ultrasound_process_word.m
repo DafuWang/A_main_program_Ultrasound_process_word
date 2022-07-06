@@ -1,10 +1,10 @@
-% clear
+clear
 clc
 close all; %先关闭所有图片
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%应力应变数据处理%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% clc
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%应力应变数据处理%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+clc
 tic
-%% %%%%%%%%%%%%%%%%%%%%%%%%%原始数据文件名和地址输入%%%%%%%%%%%%%%%%%%%%%%%%%
+ %%%%%%%%%%%%%%%%%%%%%%%%%原始数据文件名和地址输入%%%%%%%%%%%%%%%%%%%%%%%%%
 filename='C30-4-24';
 fileadress0='D:\大论文\超声波测试\20211213 24MONTH\数据处理\';
 fileadress=strcat(fileadress0,filename);
@@ -83,9 +83,3 @@ FFT_amp_main=eval(['FFT_amp_main_',group]);
 FFT_phase_main=eval(['FFT_phase_main_',group]);
 [I2]=Data_save(Distance,arrival_time,FFT_F,FFT_amp,FFT_phase,FFT_F_main,FFT_amp_main,FFT_phase_main,sheet_number,group,fileadress,filename);
 end
-
-
-
-
-
-
