@@ -53,22 +53,22 @@ distance{8}=["25mm","50mm","75mm","100mm","125mm","150mm","175mm","200mm","225mm
 figure_n_c=[3,3;3,3;2,2;2,2;4,3;4,3;1,1;4,3];
 
 
-% for i=1:8
-% Colum_initial=Colum_initial_0(i);
-% Colum_unmber=Colum_unmber_0(i);
-% group=char(64+i);
-% 
-% [I,II,Document,Content,Selection,Num,n_table,Distance0,arrival_time0,FFT_F0,FFT_amp0,FFT_phase0,FFT_F_main0,FFT_amp_main0,FFT_phase_main0]=original_and_processed_data(I,Document,Content,Selection,Num,n_table,fileadress,filename,group,Amp,figure_n_c(i,:),test_name,t,distance{i},Colum_initial,Colum_unmber);
-% eval(['Distance_',group,'=','Distance0',';'])
-% eval(['arrival_time_',group,'=','arrival_time0',';'])
-% 
-% eval(['FFT_F_',group,'=','FFT_F0',';'])
-% eval(['FFT_amp_',group,'=','FFT_amp0',';'])
-% eval(['FFT_phase_',group,'=','FFT_phase0',';'])
-% eval(['FFT_F_main_',group,'=','FFT_F_main0',';'])
-% eval(['FFT_amp_main_',group,'=','FFT_amp_main0',';'])
-% eval(['FFT_phase_main_',group,'=','FFT_phase_main0',';'])
-% end
+for i=1:8
+Colum_initial=Colum_initial_0(i);
+ Colum_unmber=Colum_unmber_0(i);
+group=char(64+i);
+ 
+[I,II,Document,Content,Selection,Num,n_table,Distance0,arrival_time0,FFT_F0,FFT_amp0,FFT_phase0,FFT_F_main0,FFT_amp_main0,FFT_phase_main0]=original_and_processed_data(I,Document,Content,Selection,Num,n_table,fileadress,filename,group,Amp,figure_n_c(i,:),test_name,t,distance{i},Colum_initial,Colum_unmber);
+eval(['Distance_',group,'=','Distance0',';'])
+eval(['arrival_time_',group,'=','arrival_time0',';'])
+
+eval(['FFT_F_',group,'=','FFT_F0',';'])
+eval(['FFT_amp_',group,'=','FFT_amp0',';'])
+eval(['FFT_phase_',group,'=','FFT_phase0',';'])
+eval(['FFT_F_main_',group,'=','FFT_F_main0',';'])
+eval(['FFT_amp_main_',group,'=','FFT_amp_main0',';'])
+eval(['FFT_phase_main_',group,'=','FFT_phase_main0',';'])
+end
 
 for i=1:8
 sheet_number=strcat('sheet',num2str(i));
